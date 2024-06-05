@@ -1,0 +1,27 @@
+.featured-post {
+  height: 50vh;
+  max-width: 45%;
+  width: 32% !important;
+  box-shadow: 5px 15px 15px darkgray;
+  min-width: 370px;
+  margin-bottom: 1% !important;
+
+  .cardMedia {
+    height: 100%;
+  }
+}
+
+#all_products_button {
+  background-color: black;
+  border-radius: 0;
+  height: 6%;
+  width: fit-content;
+}
+
+.featured_posts_wrapper {
+  margin: 3% 0;
+
+  .title {
+    margin: 2% 0;
+  }
+}

@@ -1,0 +1,120 @@
+#footer_wrapper {
+  background-color: #ebe3d5;
+  align-items: center;
+  padding: 60px;
+
+  .footer_heading {
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+
+  .footer_text {
+    padding: 20px;
+    letter-spacing: 2px;
+  }
+
+  .footer_form {
+    .footer_button {
+      position: unset;
+      display: inline-block;
+      padding: 14px 28px;
+      line-height: normal;
+      border: 2px solid black;
+      border-radius: 0;
+      height: 56px;
+      text-transform: uppercase;
+      font-size: 12px;
+      text-align: center;
+      letter-spacing: 0.2em;
+      font-weight: 500;
+      font-style: normal;
+      background-color: black;
+      color: #ebe3d5;
+      margin-left: 15px;
+    }
+  }
+
+  .footer_socials {
+    width: 30%;
+    h2 {
+      font-size: 2.5rem;
+      letter-spacing: 4px;
+      font-weight: 400;
+    }
+    margin-top: 40px;
+
+    #face {
+      width: 39px;
+      margin-right: 5px;
+    }
+
+    .social_icon {
+      width: 30px;
+      margin: 5px;
+    }
+  }
+  .footer_low-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .footer_links {
+      display: grid;
+      width: 30%;
+      padding-top: 40px;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .footer_contacts {
+      width: 30%;
+      padding-top: 40px;
+
+      span {
+        display: block;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #footer_wrapper {
+    .footer_form {
+      display: grid;
+      .footer_button {
+        margin: 20px 0px 0px 0px;
+      }
+    }
+    .footer_low-wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      .footer_links {
+        width: 100%;
+      }
+      .footer_socials {
+        width: 100%;
+
+        .socials_icons {
+          width: max-content;
+          margin: auto;
+        }
+      }
+
+      .footer_contacts {
+        width: 100%;
+      }
+    }
+  }
+}

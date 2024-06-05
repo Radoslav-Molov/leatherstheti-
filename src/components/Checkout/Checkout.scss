@@ -1,0 +1,40 @@
+#review_order {
+  .listItem {
+    padding: 5%;
+  }
+
+  .total {
+    font-weight: 700;
+  }
+
+  .title {
+    margin-top: 3%;
+  }
+}
+
+#checkout {
+  .appBar {
+    position: relative;
+  }
+
+  .layout {
+    width: auto;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .paper {
+    padding: 5%;
+    margin: 3% 0%;
+  }
+  .stepper {
+    padding: 5%;
+  }
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .button {
+    margin-top: 3%;
+    margin-left: 3%;
+  }
+}

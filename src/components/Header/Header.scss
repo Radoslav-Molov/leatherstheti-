@@ -1,0 +1,50 @@
+#header {
+  background-color: #ebe3d5;
+  .logo {
+    width: 170px;
+    margin: 1% 0;
+  }
+
+  .toolbar {
+    border-bottom: 1px solid gray;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+
+    align-content: center;
+  }
+
+  .links_wrapper {
+    width: 100%;
+    margin-bottom: 1%;
+
+    a {
+      padding: 10px;
+      text-decoration: none;
+      font-size: larger;
+    }
+
+    a:hover {
+      color: #b0a695;
+    }
+  }
+
+  .toolbarTitle {
+    flex: 1;
+  }
+
+  .toolbarSecondary {
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+
+  .toolbarLink {
+    padding: 1%;
+    flex-shrink: 0;
+  }
+
+  .cart_icon {
+    width: 30px;
+    height: 30px;
+  }
+}
