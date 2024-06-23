@@ -3,7 +3,14 @@ import FeaturedPost from "./FeaturedPosts";
 import { Button, Typography } from "@mui/material";
 
 function FeaturedPostsWrapper() {
-  const arr = [1, 2, 3, 4, 4, 5];
+  const arr = [
+    { src: "/1.jpg" },
+    { src: "/2.jpg" },
+    { src: "/3.jpg" },
+    { src: "/4.jpg" },
+    { src: "/5.jpg" },
+    { src: "/6.jpg" },
+  ];
 
   return (
     <div className='featured_posts_wrapper'>
@@ -16,7 +23,7 @@ function FeaturedPostsWrapper() {
       </Button>
       <div className='featured_wrapper'>
         {arr.map((el) => (
-          <FeaturedPost />
+          <FeaturedPost element={el} />
         ))}
       </div>
     </div>

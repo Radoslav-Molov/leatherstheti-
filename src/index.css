@@ -14,7 +14,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#marker {
-  font-size: larger;
-  color: red;
+
+.leaflet-container {
+  height: 100vh;
+  width: 100wh;
 }

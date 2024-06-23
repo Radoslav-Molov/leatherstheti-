@@ -1,19 +1,22 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import FeaturedPostsWrapper from "./components/FeaturedPosts/FeaturedPostsWrapper";
 import Footer from "./components/Footer/Footer";
-import VideoAdd from "./components/VideoAdd/VideoAdd";
 import LandingPage from "./components/LandingPage/LandingPage";
-
+import About from "./components/AboutPage/About";
+import FAQ from "./components/FAQ/FAQ";
 function App() {
   return (
     <div className='App'>
       <Header />
-      <LandingPage />
-      <FeaturedPostsWrapper />
-      {/* <VideoAdd /> */}
-
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<LandingPage />} />
+          <Route path='about' element={<About />} />
+          <Route path='faq' element={<FAQ />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </div>
   );

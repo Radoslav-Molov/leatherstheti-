@@ -9,6 +9,10 @@
   .cardMedia {
     height: 100%;
   }
+
+  .cardMedia:hover {
+    transform: scale(1.02);
+  }
 }
 
 #all_products_button {

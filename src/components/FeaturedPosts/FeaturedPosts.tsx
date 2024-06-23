@@ -1,16 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  Grid,
-  Typography,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Hidden,
-} from "@mui/material";
+import { CardActionArea, CardMedia } from "@mui/material";
 
-export default function FeaturedPost(props: any) {
+interface FeaturedPostProps {
+  element: { src: string };
+}
+
+export default function FeaturedPost(props: FeaturedPostProps) {
   const post = {
     title: "asdasdads",
     date: "2017-12-12",
@@ -23,7 +19,7 @@ export default function FeaturedPost(props: any) {
     <CardActionArea className='featured-post' component='a' href='#'>
       <CardMedia
         className='cardMedia'
-        image={post.image}
+        image={props.element.src}
         title={post.imageTitle}
       />
     </CardActionArea>

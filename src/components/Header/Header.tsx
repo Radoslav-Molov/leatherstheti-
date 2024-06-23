@@ -1,12 +1,12 @@
 import React from "react";
-import { Link, Typography, IconButton, Toolbar, Button } from "@mui/material";
-import { Search, ShoppingCart } from "@mui/icons-material";
+import { Link, Toolbar } from "@mui/material";
+import { ShoppingCart } from "@mui/icons-material";
 
 export default function Header(props: any) {
   const sections: any[] = [
     { title: "Начало", url: "asdasdsad" },
     { title: "Продукти", url: "asdasdsad" },
-    { title: "Всичко за нас", url: "asdasdsad" },
+    { title: "Всичко за нас", url: "about" },
     { title: "Контакти", url: "asdasdsad" },
   ];
   return (
