@@ -11,24 +11,25 @@ function Info() {
             Докосни се до красотата на растително дъбената кожа
           </Typography>
           <Typography component='h2' variant='h5'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates
-            doloribus hic quod autem fugiat amet similique, nemo, suscipit odio
-            dolores id nesciunt harum officia illo consequuntur cum ullam minima
-            numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Добре дошли в Leathersthetic, където красотата на ръчно изработената
+            естествена кожа оживява! Това, което започна като любопитство, скоро
+            се превърна в дълбока страст и любимо хоби.
             <br />
             <br />
-            Voluptates doloribus hic quod autem fugiat amet similique, nemo,
-            suscipit odio dolores id nesciunt harum officia illo consequuntur
-            cum ullam minima numquam? Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Voluptates doloribus hic quod autem fugiat amet
-            similique, nemo, suscipit odio dolores id nesciunt harum officia
-            illo consequuntur cum ullam minima numquam?
+            През своето пътешествие в света на кожарството открих вродената
+            красота на растително дъбената кожа и отделих безброй часове за
+            осъвършенстване на уменията си и овладяване на изкуството на работа
+            с този ценен материал. Всяко изделие, всеки шев и процес на стареене
+            станаха възможност за създаване на нещо наистина изключително.
             <br />
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            vero recusandae inventore, dicta labore possimus aperiam rerum qui
-            officiis consequuntur quas consectetur iste perspiciatis
-            necessitatibus illo placeat, reiciendis ipsam ipsum.
+            Името "Leathersthetic" представлява сближаването на естествената
+            кожа и естетиката, присъщи на този занаят. Моята мисия е да донеса
+            привлекателността на ръчно изработената кожа в ръцете и джобовете на
+            хора, които ценят красотата на естествените материали. Всеки
+            аксесоар е изработен, за да пасне според нуждите и да покаже
+            уникалните характеристики и красивото остаряване на кожата, които се
+            развиват с времето, като разказва историята на своя носител.
           </Typography>
         </div>
 

@@ -4,10 +4,11 @@ import { ShoppingCart } from "@mui/icons-material";
 
 export default function Header(props: any) {
   const sections: any[] = [
-    { title: "Начало", url: "asdasdsad" },
-    { title: "Продукти", url: "asdasdsad" },
+    { title: "Начало", url: "/" },
+    { title: "Продукти", url: "/" },
     { title: "Всичко за нас", url: "about" },
-    { title: "Контакти", url: "asdasdsad" },
+    { title: "Въпросник", url: "faq" },
+    { title: "Контакти", url: "/" },
   ];
   return (
     <div id='header'>

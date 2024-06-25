@@ -16,7 +16,7 @@ export default function FeaturedPost(props: FeaturedPostProps) {
   };
 
   return (
-    <CardActionArea className='featured-post' component='a' href='#'>
+    <CardActionArea className='featured-post' component='a' href='details'>
       <CardMedia
         className='cardMedia'
         image={props.element.src}

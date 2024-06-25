@@ -15,7 +15,16 @@ function FeaturedPostsWrapper() {
   return (
     <div className='featured_posts_wrapper'>
       <Typography className='title' component='h2' variant='h4'>
-        Актулни продукти
+        Категории
+      </Typography>
+      <Typography className='category_text' component='p'>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
+        doloremque magni nulla consectetur nesciunt corrupti id sint eos nihil
+        inventore quis, minima, officia dolores! Omnis molestiae dicta unde enim
+        voluptatem? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Harum doloremque magni nulla consectetur nesciunt corrupti id sint eos
+        nihil inventore quis, minima, officia dolores! Omnis molestiae dicta
+        unde enim voluptatem?
       </Typography>
 
       <Button id='all_products_button' variant='contained'>

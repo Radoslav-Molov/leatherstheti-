@@ -9,42 +9,45 @@ function About() {
       <div id='about_info_wrapper'>
         <img src='mini-logo.png' alt='' />
         <p>
-          <span>The story behind Leathersthetic</span>
-          Welcome to Leathersthetic, where the beauty of handcrafted leather
-          comes to life! My journey began unexpectedly, with a captivating video
-          that showcased the transformation of leather into exquisite works of
-          art. I was mesmerized by the tanning processes and the skilled
-          craftsmanship that turned raw materials into timeless pieces. Inspired
-          by this artistry, I embarked on a quest to create my own unique
-          designs, shaping my style and crafting projects that would stand the
-          test of time. <br />
+          <span>Добре дошли в Leathersthetic!</span>
+          Аз съм Ивайло, и за мен е удоволствие да ви разкажа за моята страст
+          към изработването на кожени изделия. На 26 години съм и се занимавам с
+          този неповторим занаят вече 3 години, като започнах през 2021-ва.
+          Самообучавайки се, открих в себе си огромно удовлетворение от това да
+          създавам неща с ръцете си, а свързването на тази страст с
+          привлекателността и разнообразието на растително дъбената кожа беше
+          естествен избор за мен.
           <br />
-          What started as a curiosity soon evolved into a deep passion and a
-          beloved hobby. Throughout my leatherworking journey, I discovered the
-          inherent beauty of each piece of leather, and I dedicated countless
-          hours to honing my skills and mastering the art of working with this
-          exquisite material. Every fold, stitch, and aging process became an
-          opportunity to create something truly exceptional. <br />
           <br />
-          The name "Leathersthetic" represents the fusion of aesthetics and
-          style inherent in this craft. It is my mission to bring the allure of
-          handcrafted leather into the hands and pockets of individuals who
-          appreciate the beauty of natural materials. Each accessory is
-          thoughtfully designed and crafted to showcase the unique
-          characteristics and patina that develop over time, creating a distinct
-          story that resonates with its wearer. <br />
+          Идеята зад Leathersthetic е да споделя тази неповторима красота и
+          гъвкавост на естествената качествена кожа с възможно най-много хора.
+          Избрал съм да работя точно с растително дъбена кожа, защото се
+          обработва натурално и буквално може да надживее целия живот на своя
+          собственик, заменяйки необходимостта от честа смяна на продукти.
+          Нейната уникалност идва от процеса на обработка, при който се
+          използват естествени растителни съставки, като дъбова кора. Тези
+          съставки правят кожата да попие по различен начин, водейки до различни
+          нюанси, текстури и оттенъци.
           <br />
-          I invite you to embark on a journey through Leathersthetic, where
-          you'll discover a collection of accessories that embody elegance,
-          durability, and individuality. From wallets that age gracefully with
-          every use to timeless accessories for your personal style, each piece
-          tells its own tale and carries the mark of true craftsmanship. <br />
           <br />
-          Thank you for visiting my store. I hope you find an accessory that not
-          only complements your style but also becomes a cherished part of your
-          story. Should you have any questions or special requests, please don't
-          hesitate to reach out. I'm here to help you find the perfect leather
-          creation that resonates with your unique journey.
+          Поради тази индивидуалност в производствения процес, не се получават
+          две еднакви парчета растително дъбена кожа. Това прави всяко парче
+          специално само по себе си. Ръчната изработка също добавя стойност,
+          защото включва индивидуално внимание към детайлите, специфични
+          занаятчийски умения и персонален подход, които придават на всеки
+          продукт неповторим характер и качество. Моята мисия не е просто да
+          продавам кожени изделия, а да намеря начини да намаля
+          свръхконсуматорството и да предложа нещо ценно, което ще служи с
+          години, а не се износва лесно.
+          <br />
+          <br />
+          Кожата, с която работя, отнема много повече време за производство от
+          другите видове кожа, затова е по-скъпа, но същевременно е
+          по-качествена, устойчива и не вреди на околната среда, което също е
+          важно за мен. Само 10% от кожените изделия в света са направени от
+          растително дъбена кожа, и в този сайт ще намериш само от такъв вид,
+          като имаш възможност да притежаваш нещо наистина уникално и ценно и да
+          подкрепиш ръчното производство и малкия български бизнес.
         </p>
       </div>
     </div>
