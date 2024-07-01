@@ -7,6 +7,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import About from "./components/AboutPage/About";
 import FAQ from "./components/FAQ/FAQ";
 import Details from "./components/DetailsPage/Details";
+import Products from "./components/Products/Products";
 function App() {
   return (
     <div className='App'>
@@ -17,6 +18,7 @@ function App() {
           <Route path='about' element={<About />} />
           <Route path='faq' element={<FAQ />} />
           <Route path='details' element={<Details />} />
+          <Route path='products' element={<Products />} />
         </Routes>
       </BrowserRouter>
       <Footer />
