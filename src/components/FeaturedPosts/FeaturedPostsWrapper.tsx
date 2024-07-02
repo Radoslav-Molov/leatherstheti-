@@ -18,13 +18,11 @@ function FeaturedPostsWrapper() {
         Категории
       </Typography>
       <Typography className='category_text' component='p'>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
-        doloremque magni nulla consectetur nesciunt corrupti id sint eos nihil
-        inventore quis, minima, officia dolores! Omnis molestiae dicta unde enim
-        voluptatem? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Harum doloremque magni nulla consectetur nesciunt corrupti id sint eos
-        nihil inventore quis, minima, officia dolores! Omnis molestiae dicta
-        unde enim voluptatem?
+        Разгледайте нашата селекция от ръчно изработени кожени изделия,
+        създадени с внимание към детайлите и от висококачествени материали.
+        Всеки продукт е уникален и съчетава традиционни техники с модерен
+        дизайн, за да ви предложи стилни и издръжливи аксесоари, които ще ви
+        служат дълги години.
       </Typography>
 
       <Button id='all_products_button' variant='contained'>

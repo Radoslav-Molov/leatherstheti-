@@ -5,15 +5,15 @@ import { ShoppingCart } from "@mui/icons-material";
 export default function Header(props: any) {
   const sections: any[] = [
     { title: "Начало", url: "/" },
-    { title: "Продукти", url: "/" },
-    { title: "Всичко за нас", url: "about" },
-    { title: "Въпросник", url: "faq" },
-    { title: "Контакти", url: "/" },
+    { title: "Продукти", url: "/products" },
+    { title: "Всичко за нас", url: "/about" },
+    { title: "Въпросник", url: "/faq" },
+    { title: "Контакти", url: "#footer_wrapper" },
   ];
   return (
     <div id='header'>
       <Toolbar className='toolbar'>
-        <img className='logo' src='black-logo.png' alt='' />
+        <img className='logo' src='/black-logo.png' alt='' />
         <div className='links_wrapper'>
           {sections.map((section: any) => (
             <Link

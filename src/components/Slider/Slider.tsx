@@ -20,7 +20,7 @@ function Slider() {
           <div className='carousel-item'>
             <img
               className='d-block w-100 carousel-image'
-              src='/land.jpg'
+              src='/land2.jpg'
               alt='Second slide'
             />
           </div>
