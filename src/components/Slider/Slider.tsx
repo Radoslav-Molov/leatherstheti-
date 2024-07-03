@@ -7,7 +7,7 @@ function Slider() {
         id='carouselExampleControls'
         className='carousel slide carousel_wrapper'
         data-ride='carousel'
-        data-interval='5000'
+        data-interval='3000'
       >
         <div className='carousel-inner carousel_child'>
           <div className='carousel-item active'>

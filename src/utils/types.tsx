@@ -4,4 +4,5 @@ export default interface Product {
   characteristics: string[];
   src: string;
   count: number;
+  mainImg: string;
 }

@@ -39,21 +39,21 @@ function Footer() {
               target='_blank'
               rel='noreferrer'
             >
-              <img className='social_icon' src='etsy-logo.svg' alt='Etsy' />
+              <img className='social_icon' src='/etsy-logo.svg' alt='Etsy' />
             </a>
             <a
               href='https://www.instagram.com/leathersthetic/'
               target='_blank'
               rel='noreferrer'
             >
-              <img className='social_icon' src='insta.png' alt='Instagram' />
+              <img className='social_icon' src='/insta.png' alt='Instagram' />
             </a>
             <a
               href='https://www.facebook.com/leatherstetic'
               target='_blank'
               rel='noreferrer'
             >
-              <img id='face' src='face.png' alt='Facebook' />
+              <img id='face' src='/face.png' alt='Facebook' />
             </a>
           </div>
         </div>

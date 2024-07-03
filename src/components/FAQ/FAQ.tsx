@@ -31,28 +31,23 @@ function FAQ() {
             id='accordion-button-1'
             aria-expanded='false'
           >
-            <span className='accordion-title'>
-              Why handmade leather goods price is expensive?
-            </span>
+            <span className='accordion-title'>С какъв вид кожа работите?</span>
             <span className='icon' aria-hidden='true'></span>
           </button>
           <div className='accordion-content'>
             <p>
-              Crafting leather goods is an intricate process, involving
-              significant time and effort to each piece. Unlike mass production,
-              handmade items require detailed stitching and finishing that
-              automation can't replicate. With years of experience, I ensure
-              top-notch quality, contributing to the higher price point. Premium
-              leather is the cornerstone of our goods, chosen for its durability
-              and luxurious feel. While this quality material comes at a cost,
-              it ages beautifully over time, adding value to your investment.
+              Работя с висококачествена, италианска пълнозърнеста кожа,
+              доставена от реномирани доставчици. Пълнозърнестатат кожа запазва
+              естествените характеристики на материала, включително текстурата и
+              уникалните белези. Обработва се с растителни танини за около 4-6
+              седмици, което я прави рядка и ценна.
               <br />
-              Customization options allow customers to personalize their
-              products, from colors to unique designs. This bespoke service
-              requires additional time and effort, impacting the overall price.
-              Limited production adds exclusivity to my goods. Owning a handmade
-              piece means owning a unique work of art, reflecting the passion
-              and dedication of the craftsman.
+              Резултатът е издръжлива, екологична и устойчива кожа, която
+              развива характерна патина с времето. Това я прави идеална за
+              ежедневни изделия, които издържат на износване и са добра
+              инвестиция във времето. Само 10% от всички кожи днес са обработени
+              чрез растително дъбене, което гарантира, че притежавате нещо
+              наистина специално.
             </p>
           </div>
         </div>
@@ -64,25 +59,20 @@ function FAQ() {
             aria-expanded='false'
           >
             <span className='accordion-title'>
-              Why handmade leather goods is better then machined ones?
+              Каква е разликата между растително дъбена кожа и другите видове
+              кожа?
             </span>
             <span className='icon' aria-hidden='true'></span>
           </button>
           <div className='accordion-content'>
             <p>
-              Handmade leather products embody the human touch, showcasing
-              dedication, precision, and uniqueness. Crafted with attention to
-              detail, they carry a narrative that evolves with each use. Made
-              from premium Italian leather, handmade goods boast exceptional
-              quality and durability. Every stitch and finish is meticulously
-              done by hand, ensuring longevity and a timeless appeal.
-              <br />
-              Customization is a hallmark of handmade leather goods, allowing
-              for personalized features to reflect individual style and
-              preferences. This bespoke approach highlights the craftsman's
-              commitment to creating something truly special. Also purchasing
-              handmade leather goods supports artisans and their time,
-              preserving traditional skills and benefiting local communities.
+              Растително дъбената кожа се произвежда чрез традиционен процес на
+              обработка с растителни екстракти, което я прави екологично чист и
+              устойчив продукт. Този процес не използва вредни химикали и
+              резултатът е кожа, която е естествена, здрава и издръжлива. Тя има
+              уникален външен вид и аромат и с времето придобива красива патина,
+              което я прави още по-ценна, защото само този вид кожа има това
+              качество.
             </p>
           </div>
         </div>
@@ -94,17 +84,23 @@ function FAQ() {
             aria-expanded='false'
           >
             <span className='accordion-title'>
-              What materials do you use in your handmade leather products?
+              Защо да изберете ръчно изработени кожени изделия?
             </span>
             <span className='icon' aria-hidden='true'></span>
           </button>
           <div className='accordion-content'>
             <p>
-              I use high-quality, genuine leather sourced from reputable
-              suppliers. The leather I work with is vegetable tanned which means
-              it is tanned using natural tannins from trees. The leather
-              produced is more natural, eco-friendly and eventually develops its
-              own unique patina, meaning that it only gets better with age.
+              Изработването на ръчно изработени кожени изделия изисква
+              значително време и умения. Всеки етап от процеса се изпълнява с
+              прецизност и внимание, което автоматизацията не може да постигне.
+              Ръчната изработка притежава уникалност, която машинното
+              производство не може да пресъздаде.
+              <br />
+              Всеки детайл е внимателно изпипан с човешка ръка, придавайки
+              неповторимост и характер. Персонализацията е ключов аспект на
+              ръчно изработените кожени изделия. Възможността да се добавят
+              индивидуални характеристики прави всяко изделие уникално,
+              отразявайки личния стил и предпочитания на собственика.
             </p>
           </div>
         </div>
@@ -116,18 +112,17 @@ function FAQ() {
             aria-expanded='false'
           >
             <span className='accordion-title'>
-              How do I care for my leather product?
+              Предлагате ли опции за персонализация на кожените си изделия?
             </span>
             <span className='icon' aria-hidden='true'></span>
           </button>
           <div className='accordion-content'>
             <p>
-              Leather is a natural material that requires proper care to
-              maintain its beauty. I recommend using a leather balm periodically
-              to keep it moisturized and protected from drying out or cracking.
-              Avoid exposing your leather goods to extreme temperatures or
-              excessive moisture, and store them in a cool, dry place when not
-              in use.
+              Да, предлагам. Персонализацията е важна за моите клиенти, затова
+              предлагам различни опции за персонализация, като гравиране на
+              инициали, избор на различни цветове или дори създаване на
+              персонализирани дизайни. Свържете се с мен за повече информация
+              как да персонализирате коженото си изделие.
             </p>
           </div>
         </div>
@@ -139,17 +134,19 @@ function FAQ() {
             aria-expanded='false'
           >
             <span className='accordion-title'>
-              Do you offer customization options for your leather goods?
+              Колко време отнема да получа поръчката си?
             </span>
             <span className='icon' aria-hidden='true'></span>
           </button>
           <div className='accordion-content'>
             <p>
-              Yes, I do! Personalization is important to my customers, so I
-              offer various customization options such as embossing initials,
-              choosing different colors, or even creating custom designs.
-              Contact me for more information on how to personalize your leather
-              item.
+              Тъй като всеки продукт е ръчно изработен по поръчка, моля, имайте
+              предвид времето за обработка в допълнение към доставката.
+              Обикновено поръчките се приемат, изработват и изпращат в рамките
+              на 7 работни дни. След като бъдат изпратени, времето за доставка
+              може да варира в зависимост от вашето местоположение и избрания
+              метод за доставка. Ще получите номер за проследяване, след като
+              поръчката ви бъде изпратена.
             </p>
           </div>
         </div>
@@ -160,19 +157,16 @@ function FAQ() {
             id='accordion-button-6'
             aria-expanded='false'
           >
-            <span className='accordion-title'>
-              How long does it take to receive my order?
-            </span>
+            <span className='accordion-title'>Примате ли поръчки на едро?</span>
             <span className='icon' aria-hidden='true'></span>
           </button>
           <div className='accordion-content'>
             <p>
-              Since each product is handmade to order, please allow for
-              processing time in addition to shipping. Typically, orders are
-              processed and shipped within 10 business days. Once shipped,
-              delivery times may vary depending on your location and chosen
-              shipping method. You will receive a tracking number once your
-              order has been dispatched.
+              Да, приемам групови поръчки за фирми или събития. Независимо дали
+              се интересувате от продажба на моите продукти във вашия магазин
+              или поръчка за корпоративни подаръци, мога да удовлетворя вашите
+              нужди. Моля, свържете се с мен на посочения имейл с вашите
+              изисквания и ще се радвам да предоставя повече информация.
             </p>
           </div>
         </div>
