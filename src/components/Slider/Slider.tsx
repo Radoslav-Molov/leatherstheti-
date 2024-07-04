@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 function Slider() {
   return (
     <div id='slider_wrapper'>

@@ -11,3 +11,31 @@
   height: fit-content;
   margin: 2%;
 }
+
+.modal_btn_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3%;
+}
+
+.modal_btn_wrapper > .modal_btn {
+  height: 6%;
+  width: fit-content;
+  border-radius: 0;
+  margin-left: 6%;
+  margin-bottom: 3%;
+  background-color: black;
+  color: white;
+
+  text-align: center;
+}
+
+.modal_btn_wrapper > p {
+  width: 100%;
+  margin: 2%;
+}
+
+.modal_btn_wrapper > .modal_btn:hover {
+  background-color: rgb(43, 43, 43);
+}
