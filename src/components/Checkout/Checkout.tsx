@@ -4,29 +4,12 @@ import Review from "./ReviewOrder";
 import {
   CssBaseline,
   Typography,
-  AppBar,
-  Toolbar,
   Paper,
   Stepper,
   Step,
   StepLabel,
   Button,
-  Link,
-  makeStyles,
 } from "@mui/material";
-
-function Copyright() {
-  return (
-    <Typography variant='body2' color='textSecondary' align='center'>
-      {"Copyright © "}
-      <Link color='inherit' href='https://mui.com/'>
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 const steps = ["Shipping address", "Review your order"];
 
@@ -55,13 +38,6 @@ export default function Checkout() {
   return (
     <div id='checkout'>
       <CssBaseline />
-      <AppBar position='absolute' color='default' className='appBar'>
-        <Toolbar>
-          <Typography variant='h6' color='inherit' noWrap>
-            Company name
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <main className='layout'>
         <Paper className='paper'>
           <Typography component='h1' variant='h4' align='center'>
@@ -108,7 +84,6 @@ export default function Checkout() {
             )}
           </React.Fragment>
         </Paper>
-        <Copyright />
       </main>
     </div>
   );

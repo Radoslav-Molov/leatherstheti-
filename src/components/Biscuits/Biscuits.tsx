@@ -17,17 +17,36 @@ const style = {
 };
 
 function Biscuits() {
-  const [cookiesConsent, setCookiesConsent] = useCookies(["cookiesConsent"]);
+  const [cookies, setCookies] = useCookies();
   const [shouldModalAppear, setShouldModalAppear] = useState(false);
   const [modalSettingsPage, setModalSettingsPage] = useState(false);
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = useState({
+    all: false,
+    session: false,
+    analytic: false,
+  });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(event.target.checked);
+    console.log(event);
+    switch (event.target.defaultValue) {
+      case "all":
+        setChecked({
+          all: event.target.checked,
+          session: event.target.checked,
+          analytic: event.target.checked,
+        });
+        break;
+      case "session":
+        setChecked({ ...checked, session: event.target.checked });
+        break;
+      case "analytic":
+        setChecked({ ...checked, analytic: event.target.checked });
+        break;
+    }
   };
 
   useEffect(() => {
-    Object.keys(cookiesConsent).length === 0
+    Object.keys(cookies).length === 0
       ? setShouldModalAppear(true)
       : setShouldModalAppear(false);
   }, []);
@@ -45,8 +64,26 @@ function Biscuits() {
       );
     }
 
-    setCookiesConsent("cookiesConsent", true, { expires: current });
+    let acceptedAll:
+      | boolean
+      | {
+          all: boolean;
+          session: boolean;
+          analytic: boolean;
+        } = false;
+
+    if (!checked.all && !checked.analytic && !checked.session) {
+      acceptedAll = { ...checked, all: true };
+    }
+
     handleClose();
+    setCookies(
+      "cookiesConsent",
+      JSON.stringify(acceptedAll ? acceptedAll : checked),
+      {
+        expires: current,
+      }
+    );
   };
 
   const handleCookieSettings = () => {
@@ -56,7 +93,7 @@ function Biscuits() {
   const handleClose = () => {
     setShouldModalAppear(false);
   };
-  console.log(cookiesConsent);
+
   return (
     <Modal
       open={shouldModalAppear}
@@ -94,47 +131,72 @@ function Biscuits() {
                   Приеми всички
                 </Typography>
                 <Switch
+                  checked={checked.all}
                   onChange={handleChange}
-                  value='asdsadasd'
+                  value='all'
                   color='default'
                 />
               </div>
             </Typography>
             <div className='biscuit_option'>
               <Typography variant='h6' component='h3'>
-                Съгласие за използването на бисквитки
+                Необходими бисквитки
               </Typography>
-              <Switch onChange={handleChange} color='default' />
               <Typography className='biscuit_purpose' component='p'>
-                Тези бисквитки са необходими за функционирането на уебсайта и не
-                могат да бъдат изключени.
+                Тези бисквитки са нужни за правилното функциониране на сайта,
+                като например преференции или попълнени формуляри. С
+                използването на сайта се съгласявате те да бъдат записани на
+                устройството.
               </Typography>
             </div>
             <div className='biscuit_option'>
               <Typography variant='h6' component='h3'>
-                Съгласие за използването на бисквитки
+                Сесийни бисквитки
               </Typography>
-              <Switch onChange={handleChange} color='default' />
+              <Switch
+                value='session'
+                checked={checked.session}
+                disabled={checked.all}
+                onChange={handleChange}
+                color='default'
+              />
               <Typography className='biscuit_purpose' component='p'>
-                Тези бисквитки са необходими за функционирането на уебсайта и не
-                могат да бъдат изключени.
+                Сесийните бисквитки, известни също като "временни бисквитки",
+                помагат на уебсайтовете да разпознават потребителите и
+                информацията, предоставена от тях при навигация през уебсайта.
+                След като уеб браузърът бъде затворен, бисквитките се изтриват
+                или определено време след това.
               </Typography>
             </div>
             <div className='biscuit_option'>
               <Typography variant='h6' component='h3'>
-                Съгласие за използването на бисквитки
+                Аналитични бисквитки
               </Typography>
-              <Switch onChange={handleChange} color='default' />
+              <Switch
+                value='analytic'
+                onChange={handleChange}
+                color='default'
+                checked={checked.analytic}
+                disabled={checked.all}
+              />
               <Typography className='biscuit_purpose' component='p'>
-                Тези бисквитки са необходими за функционирането на уебсайта и не
-                могат да бъдат изключени.
+                Тези бисквитки ни позволяват да броим посещенията и източниците
+                на трафик, така че да можем да измерим и подобрим работата на
+                нашия сайт.
               </Typography>
             </div>
             <div className='modal_btn_wrapper'>
               <Typography className='biscuit_purpose' component='p'>
-                С използването на сайта се съгласявате с ....
+                С използването на сайта се съгласявате с{" "}
+                <a className='anchor' href='/privacy&policy'>
+                  политиката за поверителност
+                </a>
               </Typography>
-              <Button className='modal_btn' onClick={handleCookieAccept}>
+              <Button
+                id={modalSettingsPage ? "single_btn" : ""}
+                className='modal_btn'
+                onClick={handleCookieAccept}
+              >
                 Запази избора си
               </Button>
             </div>

@@ -13,14 +13,17 @@
 }
 
 #checkout {
+  width: 60%;
+  margin: 5vh auto;
+  max-height: 90vh;
+  overflow: auto;
+
   .appBar {
     position: relative;
   }
 
   .layout {
     width: auto;
-    margin-left: 3%;
-    margin-right: 3%;
   }
   .paper {
     padding: 5%;

@@ -9,11 +9,36 @@ import FAQ from "./components/FAQ/FAQ";
 import Details from "./components/DetailsPage/Details";
 import Products from "./components/Products/Products";
 import Biscuits from "./components/Biscuits/Biscuits";
+import PrivacyAndPolicy from "./components/PrivacyAndTerms/PrivacyAndPolicy";
+import Shipping from "./components/PrivacyAndTerms/Shipping";
+import TermsAndConditions from "./components/PrivacyAndTerms/TermsAndConditions";
+import Checkout from "./components/Checkout/Checkout";
+import { Fab, Modal } from "@mui/material";
+import { useState } from "react";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 function App() {
+  const [checkoutModal, setCheckoutModal] = useState(false);
+
+  const handleChekoutClose = () => {
+    setCheckoutModal(false);
+  };
+
+  const openCartModal = () => {
+    setCheckoutModal(true);
+  };
+
   return (
     <div className='App'>
       <Biscuits />
+      <Modal
+        open={checkoutModal}
+        onClose={handleChekoutClose}
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
+      >
+        <Checkout />
+      </Modal>
       <CookiesProvider>
         <Header />
         <BrowserRouter>
@@ -23,8 +48,20 @@ function App() {
             <Route path='faq' element={<FAQ />} />
             <Route path='details' element={<Details />} />
             <Route path='products' element={<Products />} />
+            <Route path='privacy&policy' element={<PrivacyAndPolicy />} />
+            <Route path='shipping' element={<Shipping />} />
+            <Route path='terms&conditions' element={<TermsAndConditions />} />
           </Routes>
         </BrowserRouter>
+        <Fab
+          id='cart_floaty'
+          size='large'
+          color='primary'
+          aria-label='cart'
+          onClick={openCartModal}
+        >
+          <ShoppingCartIcon />
+        </Fab>
         <Footer />
       </CookiesProvider>
     </div>

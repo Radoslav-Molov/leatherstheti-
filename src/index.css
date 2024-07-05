@@ -19,3 +19,22 @@ code {
   height: 100vh;
   width: 100wh;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+button {
+  font-family: "Georgia Pro Cond", sans-serif !important;
+}
+
+p,
+a,
+span {
+  font-weight: 400;
+}

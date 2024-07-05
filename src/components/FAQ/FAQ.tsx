@@ -22,7 +22,7 @@ function FAQ() {
 
   return (
     <div className='container'>
-      <h2>Frequently Asked Questions</h2>
+      <h2>Често задавани въпроси</h2>
       <div className='accordion'>
         <div className='accordion-item'>
           <button
@@ -167,28 +167,6 @@ function FAQ() {
               или поръчка за корпоративни подаръци, мога да удовлетворя вашите
               нужди. Моля, свържете се с мен на посочения имейл с вашите
               изисквания и ще се радвам да предоставя повече информация.
-            </p>
-          </div>
-        </div>
-        <div className='accordion-item'>
-          <button
-            onClick={toggleAccordion}
-            className='buttonExpand'
-            id='accordion-button-7'
-            aria-expanded='false'
-          >
-            <span className='accordion-title'>
-              Do you offer wholesale or bulk ordering?
-            </span>
-            <span className='icon' aria-hidden='true'></span>
-          </button>
-          <div className='accordion-content'>
-            <p>
-              Yes, I do offer wholesale pricing for bulk orders. Whether you're
-              interested in stocking my products in your store or purchasing for
-              corporate gifts, I can accommodate your needs. Please reach out to
-              me with your requirements, and I'll be happy to provide more
-              information.
             </p>
           </div>
         </div>

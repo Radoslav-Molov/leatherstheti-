@@ -7,32 +7,31 @@ function Footer() {
     <div id='footer_wrapper'>
       <h3 className='footer_heading'>Newsletter</h3>
       <p className='footer_text'>
-        Subscribe to be updated with all the latest products, discounts and
-        news.
+        Абонирайте се, за да получавате информация за всички най-нови продукти,
+        отстъпки и новини.
       </p>
       <div className='footer_form'>
         {!hasError ? (
-          <TextField id='outlined-search' label='Email Address' type='search' />
+          <TextField id='outlined-search' label='Имейл адрес' type='search' />
         ) : (
           <TextField
             error={true}
             id='outlined-error'
             label='Error'
-            defaultValue='Email Address'
+            defaultValue='Имейл адрес'
           />
         )}
-        <button className='footer_button'>subscribe</button>
+        <button className='footer_button'>абонирам се</button>
       </div>
       <div className='footer_low-wrapper'>
         <div className='footer_links'>
-          <a href=''>Help</a>
-          <a href=''>Shipping</a>
-          <a href=''>Privacy policy</a>
-          <a href=''>Terms and conditions</a>
-          <a href=''>FAQs</a>
+          <a href='/shipping'>Доставка и Връщане</a>
+          <a href='/privacy&policy'>Политика за поверителност</a>
+          <a href='/terms&conditions'>Общи условия</a>
+          <a href='/faq'>Въпросник</a>
         </div>
         <div className='footer_socials'>
-          <h2>Follow</h2>
+          <h2>Последвайте ни</h2>
           <div className='socials_icons'>
             <a
               href='https://www.etsy.com/shop/Leathersthetic'
@@ -58,14 +57,12 @@ function Footer() {
           </div>
         </div>
         <div className='footer_contacts'>
-          <p>Contacts</p>
+          <p>Контакти</p>
           <span>
-            Email:{" "}
-            <a href='mailto:leathersthetic@gmail.com'>
-              leathersthetic@gmail.com
-            </a>
+            Имейл:{" "}
+            <a href='mailto:info@leathersthetic.com'>info@leathersthetic.com</a>
           </span>
-          <span>Phone: +359888888888888</span>
+          <span>Телефон: +359876404445</span>
         </div>
       </div>
     </div>
