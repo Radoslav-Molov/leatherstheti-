@@ -1,8 +1,18 @@
 import CarouselLib from "../CarouselLib/CarouselLib";
 import mock from "../../utils/mock.json";
-import { Button, Typography } from "@mui/material";
+import {
+  Button,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  Typography,
+} from "@mui/material";
+import React from "react";
 
 function Details() {
+  const [radioValue, setRadioValue] = React.useState("yes");
+  const [colorChoice, setColorChoice] = React.useState(null);
+
   const count: number = mock[0].count;
 
   const generatePics = (count: number) => {
@@ -18,31 +28,92 @@ function Details() {
 
   const pics = generatePics(count);
 
+  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRadioValue((event.target as HTMLInputElement).value);
+  };
+
+  const handleColorChoice = (event: any) => {
+    if (event.target.localName === "img") {
+      setColorChoice(event.target.parentElement.value);
+    } else if (event.target.localName === "button") {
+      setColorChoice(event.target.value);
+    }
+  };
+
   return (
     <>
-      <Typography id='detail_heading' component='h2' variant='h3'>
-        {mock[0].title}
-      </Typography>
       <div id='details_wrapper'>
         <div id='detail_carousel'>
           <CarouselLib images={pics} />
         </div>
         <div id='details_info_wrapper'>
           <div id='details_product'>
-            <Typography component='h3' variant='h5'>
-              {mock[0].description}
+            <Typography id='detail_heading' component='h4'>
+              {mock[0].title}
             </Typography>
+            <Typography component='h6'>{mock[0].description}</Typography>
             <div id='details_characteristics'>
-              <Typography component='h4' variant='h4'>
-                Характеристики:
-              </Typography>
+              <Typography component='h5'>Характеристики:</Typography>
               {mock[0].characteristics?.map((characteristic) => {
-                return (
-                  <Typography component='p' variant='h5'>
-                    {characteristic}
-                  </Typography>
-                );
+                return <Typography component='p'>{characteristic}</Typography>;
               })}
+            </div>
+            <div id='customization_prompt'>
+              <Typography component='h5'>Желаете ли къстъмизация?</Typography>
+              <RadioGroup
+                aria-labelledby='demo-controlled-radio-buttons-group'
+                name='controlled-radio-buttons-group'
+                value={radioValue}
+                onChange={handleRadioChange}
+                row
+                id='radio_group_customization'
+              >
+                <FormControlLabel
+                  value='yes'
+                  control={<Radio color='success' />}
+                  label='Да'
+                />
+                <FormControlLabel
+                  value='no'
+                  control={<Radio color='secondary' />}
+                  label='Не'
+                />
+              </RadioGroup>
+            </div>
+            <div id='colors_wrapper'>
+              <Typography component='h5'>Цветови гами:</Typography>
+              <div id='color_choices'>
+                <button onClick={handleColorChoice} value='green1'>
+                  <img
+                    src='https://media.istockphoto.com/id/186863068/photo/green-leather.jpg?s=612x612&w=0&k=20&c=6p9SEqx08JK6Vn0LhwsWWa9P0VSoI9_PpETnjdJh-Ag='
+                    alt='green'
+                  />
+                </button>
+                <button onClick={handleColorChoice} value='green'>
+                  <img
+                    src='https://media.istockphoto.com/id/186863068/photo/green-leather.jpg?s=612x612&w=0&k=20&c=6p9SEqx08JK6Vn0LhwsWWa9P0VSoI9_PpETnjdJh-Ag='
+                    alt='green'
+                  />
+                </button>
+                <button onClick={handleColorChoice} value='green2'>
+                  <img
+                    src='https://media.istockphoto.com/id/186863068/photo/green-leather.jpg?s=612x612&w=0&k=20&c=6p9SEqx08JK6Vn0LhwsWWa9P0VSoI9_PpETnjdJh-Ag='
+                    alt='green'
+                  />
+                </button>
+                <button onClick={handleColorChoice} value='green3'>
+                  <img
+                    src='https://media.istockphoto.com/id/186863068/photo/green-leather.jpg?s=612x612&w=0&k=20&c=6p9SEqx08JK6Vn0LhwsWWa9P0VSoI9_PpETnjdJh-Ag='
+                    alt='green'
+                  />
+                </button>
+                <button onClick={handleColorChoice} value='green5'>
+                  <img
+                    src='https://media.istockphoto.com/id/186863068/photo/green-leather.jpg?s=612x612&w=0&k=20&c=6p9SEqx08JK6Vn0LhwsWWa9P0VSoI9_PpETnjdJh-Ag='
+                    alt='green'
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>

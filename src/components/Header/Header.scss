@@ -51,6 +51,22 @@
     width: 30px;
     height: 30px;
   }
+
+  #header_menu_wrapper {
+    width: 30%;
+    height: 50px;
+    display: flex;
+
+    button {
+      margin: auto;
+
+      svg {
+        height: 40px;
+        width: 40px;
+        color: darkgrey;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 900px) {

@@ -73,7 +73,7 @@ function Biscuits() {
         } = false;
 
     if (!checked.all && !checked.analytic && !checked.session) {
-      acceptedAll = { ...checked, all: true };
+      acceptedAll = { all: true, session: true, analytic: true };
     }
 
     handleClose();
