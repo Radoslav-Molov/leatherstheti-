@@ -1,6 +1,7 @@
 import { Box, Button, Modal, Switch, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import { Link } from "react-router-dom";
 
 const style = {
   position: "absolute" as "absolute",
@@ -188,9 +189,7 @@ function Biscuits() {
             <div className='modal_btn_wrapper'>
               <Typography className='biscuit_purpose' component='p'>
                 С използването на сайта се съгласявате с{" "}
-                <a className='anchor' href='/privacy&policy'>
-                  политиката за поверителност
-                </a>
+                <Link to='/privacy&policy'>политиката за поверителност</Link>
               </Typography>
               <Button
                 id={modalSettingsPage ? "single_btn" : ""}

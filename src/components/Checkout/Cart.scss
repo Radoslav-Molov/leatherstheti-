@@ -1,0 +1,177 @@
+.table-cart {
+  margin: 1em auto;
+  overflow: hidden;
+  width: 90%;
+}
+
+.row-head {
+  display: flex;
+  justify-content: space-around;
+
+  p {
+    height: fit-content;
+    margin: auto;
+  }
+}
+
+tr > th {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.table-data img {
+  height: 45px;
+  width: 80px;
+  display: block;
+}
+.table-data {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table-data tr {
+  border-bottom: 1px solid #d0d0d0;
+}
+.table-data td,
+.table-data th {
+  color: #222;
+  padding: 12px 15px;
+}
+.table-data td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-data th {
+  font-weight: 600;
+  font-size: 100%;
+}
+
+.quantity-button {
+  border: solid thin var(--bg-color-light);
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--bg-color-light);
+  width: 120px;
+  margin: auto;
+}
+#quantity {
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.decrease,
+.increase {
+  color: black;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.decrease-off {
+  pointer-events: none;
+  color: var(--bg-color-light);
+}
+.decrease:hover,
+.increase:hover {
+  color: var(--bg-color-green);
+}
+
+@media screen and (max-width: 700px) {
+  .table-data,
+  .table-data tr,
+  .table-data td {
+    display: grid;
+  }
+  .table-data img {
+    width: 60px;
+    height: 70px;
+  }
+  .table-data td:first-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;
+    justify-content: center;
+  }
+  .table-data td:not(:first-child) {
+    clear: both;
+    margin-left: 90px;
+    padding: 4px 20px 4px 95px;
+    position: relative;
+    text-align: left;
+  }
+  .table-data td:not(:first-child):before {
+    color: #999;
+    content: "";
+    display: block;
+    left: 0;
+    top: 0.45em;
+    position: absolute;
+    font-size: 0.8em;
+  }
+  .table-data td:nth-child(2):before {
+    content: "Цена:";
+  }
+  .table-data td:nth-child(3):before {
+    content: "Количество:";
+  }
+  .table-data td:nth-child(4):before {
+    content: "Общо:";
+  }
+  .table-data tr {
+    padding: 10px 0;
+    position: relative;
+  }
+  .table-data tr:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 2em;
+  }
+  .table-data img {
+    height: auto;
+    margin: 0;
+    width: 100%;
+  }
+  .table-data tr:nth-child(2n + 1) {
+    background: none;
+  }
+  .table-data td:first-child {
+    padding: 0;
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: 100%;
+    justify-content: center;
+  }
+  .table-data td:not(:first-child) {
+    margin: 0;
+    padding: 5px 15px;
+    width: 100%;
+  }
+  .table-data td:not(:first-child):before {
+    padding-top: 0.3em;
+    margin-bottom: 6px;
+    position: relative;
+    top: 0;
+  }
+  .table-data td:last-child {
+    padding-bottom: 10px !important;
+  }
+  .table-data tr {
+    margin-bottom: 1.5rem;
+    padding: 0;
+  }
+}

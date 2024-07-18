@@ -13,7 +13,7 @@ import PrivacyAndPolicy from "./components/PrivacyAndTerms/PrivacyAndPolicy";
 import Shipping from "./components/PrivacyAndTerms/Shipping";
 import TermsAndConditions from "./components/PrivacyAndTerms/TermsAndConditions";
 import Checkout from "./components/Checkout/Checkout";
-import { Badge, Fab, Modal } from "@mui/material";
+import { Fab, Modal } from "@mui/material";
 import { useState } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
@@ -41,18 +41,17 @@ function App() {
       </Modal>
       <CookiesProvider>
         <Header />
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<LandingPage />} />
-            <Route path='about' element={<About />} />
-            <Route path='faq' element={<FAQ />} />
-            <Route path='details' element={<Details />} />
-            <Route path='products' element={<Products />} />
-            <Route path='privacy&policy' element={<PrivacyAndPolicy />} />
-            <Route path='shipping' element={<Shipping />} />
-            <Route path='terms&conditions' element={<TermsAndConditions />} />
-          </Routes>
-        </BrowserRouter>
+
+        <Routes>
+          <Route index element={<LandingPage />} />
+          <Route path='about' element={<About />} />
+          <Route path='faq' element={<FAQ />} />
+          <Route path='details' element={<Details />} />
+          <Route path='products' element={<Products />} />
+          <Route path='privacy&policy' element={<PrivacyAndPolicy />} />
+          <Route path='shipping' element={<Shipping />} />
+          <Route path='terms&conditions' element={<TermsAndConditions />} />
+        </Routes>
 
         <Fab
           id='cart_floaty'

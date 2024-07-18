@@ -5,13 +5,22 @@ import {
   FormControlLabel,
   Checkbox,
   Grid,
+  RadioGroup,
+  Radio,
 } from "@mui/material";
 
 export default function AddressForm() {
+  const [radioValue, setRadioValue] = React.useState("sad");
+
+  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event);
+    setRadioValue(event.target.defaultValue);
+  };
+
   return (
     <>
       <Typography variant='h6' gutterBottom>
-        Shipping address
+        Данни за доставка
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
@@ -19,7 +28,7 @@ export default function AddressForm() {
             required
             id='firstName'
             name='firstName'
-            label='First name'
+            label='Име'
             fullWidth
             autoComplete='given-name'
           />
@@ -29,28 +38,9 @@ export default function AddressForm() {
             required
             id='lastName'
             name='lastName'
-            label='Last name'
+            label='Фамилия'
             fullWidth
             autoComplete='family-name'
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            id='address1'
-            name='address1'
-            label='Address line 1'
-            fullWidth
-            autoComplete='shipping address-line1'
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            id='address2'
-            name='address2'
-            label='Address line 2'
-            fullWidth
-            autoComplete='shipping address-line2'
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -58,7 +48,7 @@ export default function AddressForm() {
             required
             id='city'
             name='city'
-            label='City'
+            label='Град'
             fullWidth
             autoComplete='shipping address-level2'
           />
@@ -66,37 +56,42 @@ export default function AddressForm() {
         <Grid item xs={12} sm={6}>
           <TextField
             id='state'
+            required
             name='state'
-            label='State/Province/Region'
+            label='Телефонен номер'
             fullWidth
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id='zip'
-            name='zip'
-            label='Zip / Postal code'
-            fullWidth
-            autoComplete='shipping postal-code'
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id='country'
-            name='country'
-            label='Country'
-            fullWidth
-            autoComplete='shipping country'
-          />
+        <Grid item xs={12} sm={6} className='company_select'>
+          <Typography component='p'>Избор на доставчик</Typography>
+          <RadioGroup
+            aria-labelledby='demo-controlled-radio-buttons-group'
+            name='controlled-radio-buttons-group'
+            value={radioValue}
+            onChange={handleRadioChange}
+            row
+            id='radio_group_customization'
+          >
+            <FormControlLabel
+              value='econt'
+              control={<Radio color='default' />}
+              label='Econt / Еконт'
+            />
+            <FormControlLabel
+              value='speedy'
+              control={<Radio color='default' />}
+              label='Speedy / Спиди'
+            />
+          </RadioGroup>
         </Grid>
         <Grid item xs={12}>
-          <FormControlLabel
-            control={
-              <Checkbox color='secondary' name='saveAddress' value='yes' />
-            }
-            label='Use this address for payment details'
+          <TextField
+            required
+            id='address1'
+            name='address1'
+            label='Адрес за доставка'
+            fullWidth
+            autoComplete='shipping address-line1'
           />
         </Grid>
       </Grid>

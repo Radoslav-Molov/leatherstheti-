@@ -1,6 +1,6 @@
 #review_order {
   .listItem {
-    padding: 5%;
+    padding: 1%;
   }
 
   .total {
@@ -16,7 +16,6 @@
   width: 60%;
   margin: 5vh auto;
   max-height: 90vh;
-  overflow: auto;
 
   .appBar {
     position: relative;
@@ -31,6 +30,10 @@
   }
   .stepper {
     padding: 5%;
+
+    svg {
+      color: black !important;
+    }
   }
   .buttons {
     display: flex;
@@ -39,5 +42,17 @@
   .button {
     margin-top: 3%;
     margin-left: 3%;
+    background-color: black;
+    color: white;
+  }
+  .company_select {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #checkout {
+    width: 90%;
   }
 }

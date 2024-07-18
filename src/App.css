@@ -49,7 +49,8 @@
   position: fixed;
   bottom: 5%;
   right: 2%;
-  background-color: saddlebrown;
+  background-color: #f3ece1;
+  color: black;
   width: 4%;
   height: 7%;
 }

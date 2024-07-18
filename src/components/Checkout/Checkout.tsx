@@ -10,17 +10,20 @@ import {
   StepLabel,
   Button,
 } from "@mui/material";
+import Cart from "./Cart";
 
-const steps = ["Shipping address", "Review your order"];
+const steps = ["Количка", "Адрес за доставка", "Преглед на поръчаката"];
 
 function getStepContent(step: any) {
   switch (step) {
     case 0:
-      return <AddressForm />;
+      return <Cart />;
     case 1:
+      return <AddressForm />;
+    case 2:
       return <Review />;
     default:
-      throw new Error("Unknown step");
+      throw new Error("Невалидна стъпка");
   }
 }
 
@@ -41,7 +44,7 @@ export default function Checkout() {
       <main className='layout'>
         <Paper className='paper'>
           <Typography component='h1' variant='h4' align='center'>
-            Checkout
+            Количка
           </Typography>
           <Stepper activeStep={activeStep} className='stepper'>
             {steps.map((label) => (
@@ -54,12 +57,10 @@ export default function Checkout() {
             {activeStep === steps.length ? (
               <React.Fragment>
                 <Typography variant='h5' gutterBottom>
-                  Thank you for your order.
+                  Благодарим за поръчката!
                 </Typography>
                 <Typography variant='subtitle1'>
-                  Your order number is #2001539. We have emailed your order
-                  confirmation, and will send you an update when your order has
-                  shipped.
+                  Номера на поръчката е #2001539.
                 </Typography>
               </React.Fragment>
             ) : (
