@@ -5,12 +5,15 @@ import {
   FormControlLabel,
   Radio,
   RadioGroup,
+  TextField,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import React from "react";
+import HelpIcon from "@mui/icons-material/Help";
 
 function Details() {
-  const [radioValue, setRadioValue] = React.useState("yes");
+  const [radioValue, setRadioValue] = React.useState("no");
   const [colorChoice, setColorChoice] = React.useState(null);
 
   const count: number = mock[0].count;
@@ -59,26 +62,46 @@ function Details() {
               })}
             </div>
             <div id='customization_prompt'>
-              <Typography component='h5'>Желаете ли къстъмизация?</Typography>
-              <RadioGroup
-                aria-labelledby='demo-controlled-radio-buttons-group'
-                name='controlled-radio-buttons-group'
-                value={radioValue}
-                onChange={handleRadioChange}
-                row
-                id='radio_group_customization'
-              >
-                <FormControlLabel
-                  value='yes'
-                  control={<Radio color='success' />}
-                  label='Да'
+              <div id='radios_wrapper'>
+                <Typography component='h5'>
+                  Желаете ли къстъмизация
+                  <Tooltip
+                    enterTouchDelay={0}
+                    title='Ако желаете натиснете "Да" и опишете'
+                    placement='top-start'
+                  >
+                    <HelpIcon />
+                  </Tooltip>
+                </Typography>
+                <RadioGroup
+                  aria-labelledby='demo-controlled-radio-buttons-group'
+                  name='controlled-radio-buttons-group'
+                  value={radioValue}
+                  onChange={handleRadioChange}
+                  row
+                  id='radio_group_customization'
+                >
+                  <FormControlLabel
+                    value='yes'
+                    control={<Radio color='success' />}
+                    label='Да'
+                  />
+                  <FormControlLabel
+                    value='no'
+                    control={<Radio color='secondary' />}
+                    label='Не'
+                  />
+                </RadioGroup>
+                <TextField
+                  id='customization_text'
+                  color='success'
+                  fullWidth
+                  required={radioValue === "yes"}
+                  disabled={radioValue === "no"}
+                  label='Къстъмизация'
+                  variant='standard'
                 />
-                <FormControlLabel
-                  value='no'
-                  control={<Radio color='secondary' />}
-                  label='Не'
-                />
-              </RadioGroup>
+              </div>
             </div>
             <div id='colors_wrapper'>
               <Typography component='h5'>Цветови гами:</Typography>

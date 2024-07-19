@@ -89,7 +89,7 @@ export default function AddressForm() {
             required
             id='address1'
             name='address1'
-            label='Адрес за доставка'
+            label='Офис на еконт / Личен адрес'
             fullWidth
             autoComplete='shipping address-line1'
           />

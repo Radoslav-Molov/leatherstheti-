@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Link, Menu, MenuItem, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Header() {
   const sections = [
@@ -8,7 +9,6 @@ export default function Header() {
     { title: "Продукти", url: "/products" },
     { title: "Всичко за нас", url: "/about" },
     { title: "Въпросник", url: "/faq" },
-    { title: "Контакти", url: "#footer_wrapper" },
   ];
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -43,10 +43,11 @@ export default function Header() {
                 noWrap
                 key={section.title}
                 variant='body2'
-                href={section.url}
                 className='toolbarLink'
               >
-                {section.title}
+                <RouterLink className='header_links' to={section.url}>
+                  {section.title}
+                </RouterLink>
               </Link>
             ))
           ) : (
@@ -75,10 +76,14 @@ export default function Header() {
                     noWrap
                     key={section.title}
                     variant='body2'
-                    href={section.url}
                     className='toolbarLink'
                   >
-                    <MenuItem onClick={handleClose}>{section.title}</MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <RouterLink className='header_links' to={section.url}>
+                        {" "}
+                        {section.title}
+                      </RouterLink>
+                    </MenuItem>
                   </Link>
                 ))}
               </Menu>

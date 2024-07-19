@@ -1,11 +1,12 @@
 import TextField from "@mui/material/TextField";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const hasError = false;
   return (
     <div id='footer_wrapper'>
-      <h3 className='footer_heading'>Newsletter</h3>
+      <h3 className='footer_heading'>Бюлетин</h3>
       <p className='footer_text'>
         Абонирайте се, за да получавате информация за всички най-нови продукти,
         отстъпки и новини.
@@ -25,10 +26,10 @@ function Footer() {
       </div>
       <div className='footer_low-wrapper'>
         <div className='footer_links'>
-          <a href='/shipping'>Доставка и Връщане</a>
-          <a href='/privacy&policy'>Политика за поверителност</a>
-          <a href='/terms&conditions'>Общи условия</a>
-          <a href='/faq'>Въпросник</a>
+          <Link to='/shipping'>Доставка и Връщане</Link>
+          <Link to='/privacy&policy'>Политика за поверителност</Link>
+          <Link to='/terms&conditions'>Общи условия</Link>
+          <Link to='/faq'>Въпросник</Link>
         </div>
         <div className='footer_socials'>
           <h2>Последвайте ни</h2>

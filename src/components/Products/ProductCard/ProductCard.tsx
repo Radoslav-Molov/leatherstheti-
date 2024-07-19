@@ -6,13 +6,19 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Product from "../../../utils/types";
+import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard(props: ProductCardProps) {
-  console.log(props.product.src);
+  let navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate("/details");
+  };
+
   return (
     <Card className='product_card'>
       <CardMedia
@@ -20,7 +26,7 @@ export default function ProductCard(props: ProductCardProps) {
         image={props.product.mainImg}
         title={props.product.title}
       />
-      <CardContent>
+      <CardContent className='card_content'>
         <Typography gutterBottom variant='h5' component='div'>
           {props.product.title}
         </Typography>
@@ -28,8 +34,11 @@ export default function ProductCard(props: ProductCardProps) {
           {props.product.description}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size='small'>Купи</Button>
+      <CardActions className='cart_button'>
+        <Typography component='p'>123 лв.</Typography>
+        <Button size='small' onClick={handleRedirect}>
+          Виж повече
+        </Button>
       </CardActions>
     </Card>
   );
