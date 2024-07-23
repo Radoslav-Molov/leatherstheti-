@@ -73,6 +73,23 @@
   }
 }
 
+#basic-menu {
+  .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    width: 50%;
+    left: 25% !important;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .links_wrapper {
     flex-direction: column;

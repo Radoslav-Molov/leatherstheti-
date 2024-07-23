@@ -36,3 +36,11 @@
     font-size: larger;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .featured-post {
+    min-width: 47%;
+    max-width: 48%;
+    height: 40vh;
+  }
+}

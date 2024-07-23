@@ -51,3 +51,15 @@
     background-color: black;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  #info_wrapper {
+    .info_img {
+      max-width: 100%;
+    }
+
+    .text_part {
+      max-width: 100%;
+    }
+  }
+}

@@ -62,27 +62,11 @@ export default function AddressForm() {
             fullWidth
           />
         </Grid>
-        <Grid item xs={12} sm={6} className='company_select'>
-          <Typography component='p'>Избор на доставчик</Typography>
-          <RadioGroup
-            aria-labelledby='demo-controlled-radio-buttons-group'
-            name='controlled-radio-buttons-group'
-            value={radioValue}
-            onChange={handleRadioChange}
-            row
-            id='radio_group_customization'
-          >
-            <FormControlLabel
-              value='econt'
-              control={<Radio color='default' />}
-              label='Econt / Еконт'
-            />
-            <FormControlLabel
-              value='speedy'
-              control={<Radio color='default' />}
-              label='Speedy / Спиди'
-            />
-          </RadioGroup>
+        <Grid item xs={12} sm={12} className='company_select'>
+          <Typography component='p'>
+            Работим само с <strong>'Еконт'</strong>! В полето долу може да
+            попълните адрес на техен офис или личен адрес за доставка.
+          </Typography>
         </Grid>
         <Grid item xs={12}>
           <TextField
@@ -92,6 +76,15 @@ export default function AddressForm() {
             label='Офис на еконт / Личен адрес'
             fullWidth
             autoComplete='shipping address-line1'
+          />
+        </Grid>
+
+        <Grid item xs={12} sm={6} className='company_select'>
+          <TextField
+            id='state'
+            name='state'
+            label='Код за отстъпка'
+            fullWidth
           />
         </Grid>
       </Grid>

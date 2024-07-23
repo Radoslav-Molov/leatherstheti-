@@ -92,7 +92,11 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      margin: 1%;
+    }
+
+    #color_choices > button:focus {
+      border: 2px dashed black;
+      padding: 0;
     }
 
     #radio_group_customization {
