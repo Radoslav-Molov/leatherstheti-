@@ -1,4 +1,5 @@
 #review_order {
+  margin: 3vh 0;
   .listItem {
     padding: 1%;
   }
@@ -51,13 +52,48 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
   #checkout {
     width: 90%;
 
     .paper {
-      overflow: scroll;
-      height: 90vh;
+      height: fit-content;
+    }
+
+    .stepper {
+      display: block;
+
+      .MuiStepConnector-horizontal {
+        display: none;
+      }
+
+      div {
+        padding: 1%;
+        text-align: center;
+      }
+    }
+    .table-data {
+      td {
+        text-align: center;
+      }
+    }
+    .row-head {
+      img {
+        margin-bottom: 3%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #checkout {
+    width: 90%;
+    margin: 5vh auto;
+
+    .table-data {
+      td {
+        text-align: center;
+      }
     }
 
     .stepper {
@@ -73,16 +109,14 @@
       }
     }
 
-    .table-data {
-      td {
-        text-align: center;
-      }
-    }
-
     .row-head {
       img {
         margin-bottom: 3%;
       }
+    }
+    .paper {
+      overflow: scroll;
+      height: 85vh;
     }
   }
 }

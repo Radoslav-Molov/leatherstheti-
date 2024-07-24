@@ -1,30 +1,24 @@
 import React from "react";
 import { List, Typography, ListItem, ListItemText, Grid } from "@mui/material";
 
-const products = [{ name: "Product 1", desc: "A nice thing", price: "$9.99" }];
-const addresses = [
-  "1 Material-UI Drive",
-  "Reactville",
-  "Anytown",
-  "99999",
-  "USA",
-];
+const products = [{ name: "Портмоне", quantity: "2", price: "$69.99" }];
+const addresses = ["Еконт", "Емил Марков"];
 
 export default function Review() {
   return (
     <div id='review_order'>
       <Typography variant='h6' gutterBottom>
-        Order summary
+        Обобщение на поръчката
       </Typography>
       <List disablePadding>
         {products.map((product) => (
           <ListItem className='listItem' key={product.name}>
-            <ListItemText primary={product.name} secondary={product.desc} />
+            <ListItemText primary={product.name} secondary={product.quantity} />
             <Typography variant='body2'>{product.price}</Typography>
           </ListItem>
         ))}
         <ListItem className='listItem'>
-          <ListItemText primary='Total' />
+          <ListItemText primary='Общо' />
           <Typography variant='subtitle1' className='total'>
             $34.06
           </Typography>
@@ -33,9 +27,9 @@ export default function Review() {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <Typography variant='h6' gutterBottom className='title'>
-            Shipping
+            Адрес за доставка
           </Typography>
-          <Typography gutterBottom>John Smith</Typography>
+          <Typography gutterBottom>Ивака Мадафака</Typography>
           <Typography gutterBottom>{addresses.join(", ")}</Typography>
         </Grid>
       </Grid>

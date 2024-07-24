@@ -29,7 +29,8 @@ h6,
 p,
 a,
 span,
-button {
+button,
+div {
   font-family: "Georgia Pro Cond", sans-serif !important;
 }
 
