@@ -22,6 +22,9 @@ export default function FeaturedPost(props: FeaturedPostProps) {
         image={props.element.src}
         title={post.imageTitle}
       />
+      <div className='overlay'>
+        <div className='text'>Категория..</div>
+      </div>
     </CardActionArea>
   );
 }

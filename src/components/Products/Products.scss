@@ -14,6 +14,7 @@
 
   .product_card_wrapper {
     max-width: 24%;
+    text-decoration: none;
   }
 
   .products_crumb > ol {
@@ -40,6 +41,7 @@
 
       p {
         font-size: large;
+        font-weight: bold;
       }
 
       button {
@@ -67,7 +69,7 @@
       width: 24%;
       height: 60vh;
       margin: 3% 0;
-      box-shadow: -1px 9px 14px darkgray;
+      box-shadow: -1px 1px 14px darkgray;
       min-width: 100%;
       max-width: 24%;
       .product_card_img {

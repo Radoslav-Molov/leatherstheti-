@@ -69,7 +69,7 @@ export default function Checkout() {
                 <div className='buttons'>
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} className='button'>
-                      Back
+                      Назад
                     </Button>
                   )}
                   <Button
@@ -78,7 +78,9 @@ export default function Checkout() {
                     onClick={handleNext}
                     className='button'
                   >
-                    {activeStep === steps.length - 1 ? "Place order" : "Next"}
+                    {activeStep === steps.length - 1
+                      ? "Финализирай поръчката"
+                      : "Продължи"}
                   </Button>
                 </div>
               </React.Fragment>
