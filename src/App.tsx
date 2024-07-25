@@ -13,7 +13,7 @@ import PrivacyAndPolicy from "./components/PrivacyAndTerms/PrivacyAndPolicy";
 import Shipping from "./components/PrivacyAndTerms/Shipping";
 import TermsAndConditions from "./components/PrivacyAndTerms/TermsAndConditions";
 import Checkout from "./components/Checkout/Checkout";
-import { Fab, Modal } from "@mui/material";
+import { Badge, Fab, Modal } from "@mui/material";
 import { useState } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
@@ -60,7 +60,9 @@ function App() {
           aria-label='cart'
           onClick={openCartModal}
         >
-          <ShoppingCartIcon />
+          <Badge badgeContent={4} color='error'>
+            <ShoppingCartIcon />
+          </Badge>
         </Fab>
 
         <Footer />
