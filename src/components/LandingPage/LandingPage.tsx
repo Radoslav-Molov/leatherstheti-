@@ -11,7 +11,7 @@ function LandingPage() {
       <FeaturedPostsWrapper />
       <Info />
       {/* <VideoAdd /> */}
-      <Map />
+      {/* <Map /> */}
     </div>
   );
 }
